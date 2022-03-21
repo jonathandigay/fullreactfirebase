@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$primary: #001e3c;
+$secondary: #748195;
+body {
+  background: $primary;
+  color: white;
+}
+
+@import "./home.scss";

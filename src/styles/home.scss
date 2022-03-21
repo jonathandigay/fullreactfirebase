@@ -1,0 +1,28 @@
+.home {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+
+  .authentication {
+    padding: 20px 30px;
+    border: 1px solid $secondary;
+
+    .socials {
+      display: grid;
+      justify-content: center;
+
+      .social {
+        margin: 10px 5px;
+
+        button {
+          padding: 5px 10px;
+          cursor: pointer;
+          opacity: 0.8;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
