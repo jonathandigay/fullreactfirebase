@@ -10,6 +10,7 @@ const Home = () => {
   const Facebook = () => {
     FacebookLogin();
   };
+
   return (
     <div className="home">
       <div className="authentication">

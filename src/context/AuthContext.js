@@ -1,4 +1,4 @@
-import { useContext, createContext, useState, useEffect, useMemo } from "react";
+import React, { useContext, createContext, useState, useEffect } from "react";
 import { Auth, GoogleProvider, FacebookProvider } from "../firebase.config";
 import { onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 
@@ -9,7 +9,8 @@ export const UseAuthContext = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-  const [user, setCurrentUser] = useState(null);
+  const [user, setCurrentUser] = useState();
+  console.log(user);
 
   const GoogleLogin = async () => {
     await signInWithPopup(Auth, GoogleProvider).then((result) => {
