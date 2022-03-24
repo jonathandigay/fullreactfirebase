@@ -9,8 +9,9 @@ export const UseAuthContext = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-  const [user, setCurrentUser] = useState();
-  console.log(user);
+  const [user, setCurrentUser] = useState(
+    JSON.parse(localStorage.getItem("user"))
+  );
 
   const GoogleLogin = async () => {
     await signInWithPopup(Auth, GoogleProvider).then((result) => {
@@ -23,12 +24,13 @@ export const AuthProvider = ({ children }) => {
         console.log(result);
       })
       .catch((e) => {
-        console.log(e);
+        console.log(e.message);
       });
   };
 
   const SignoutUser = async () => {
     await signOut(Auth).then((res) => {
+      localStorage.removeItem("user");
       console.log("successfuly logout");
     });
   };

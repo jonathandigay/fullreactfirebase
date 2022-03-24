@@ -1,12 +1,12 @@
-import React from "react";
-import { UseAuthContext } from "../context/AuthContext";
+import React, { useState } from "react";
+import Gallery from "./Gallery";
+
+import Todolist from "./Todolist";
 const Dashboard = () => {
-  const { SignoutUser } = UseAuthContext();
   return (
     <div>
-      <div className="logout">
-        <button onClick={() => SignoutUser()}>Signout</button>
-      </div>
+      <Todolist />
+      <Gallery />
     </div>
   );
 };

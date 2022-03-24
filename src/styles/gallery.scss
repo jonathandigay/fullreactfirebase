@@ -1,0 +1,71 @@
+.galery-main {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+.gallery {
+  margin: auto;
+  .input-image {
+    label {
+      background: white;
+      display: inline-block;
+      color: black;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin: 10px 10px;
+      &:hover {
+        background: rgb(148, 148, 148);
+      }
+    }
+  }
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #333;
+
+  .image {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid white;
+    position: relative;
+
+    .exit {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: white;
+      padding: 5px;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        background: rgb(148, 148, 148);
+        color: white;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+.upload-action {
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(148, 148, 148);
+    }
+  }
+}

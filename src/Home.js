@@ -1,5 +1,6 @@
 import React from "react";
 import { UseAuthContext } from "./context/AuthContext";
+
 const Home = () => {
   const context = UseAuthContext();
   const { GoogleLogin, FacebookLogin } = context;
@@ -22,6 +23,7 @@ const Home = () => {
             <div className="social">
               <button onClick={Google}>Google</button>
             </div>
+
             <div className="social">
               <button onClick={Facebook}>Facebook</button>
             </div>
